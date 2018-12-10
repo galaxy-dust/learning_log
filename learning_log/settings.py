@@ -128,6 +128,11 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'users/login/'
 
+# django-bootstrap3 config
+BOOTSTRAP3 = {
+    'include_jquery': True,
+    }
+
 # Herku config
 Cwd = os.getcwd()
 if Cwd == '/app' or Cwd[:4] == '/tmp':
