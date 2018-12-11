@@ -2,11 +2,14 @@
 {% load bootstrap3 %}
 
 {% block header %}
+    <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
     <h2>Add a new entry:</h2>
 {% endblock header %}
 
 {% block content %}
-  <form action="{% url 'learning_logs:new_entry' %}" method="post" class="form">
+
+  <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post' class='form'>
+
     {% csrf_token %}
     {% bootstrap_form form %}
 
