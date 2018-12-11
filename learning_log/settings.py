@@ -146,3 +146,5 @@ if Cwd == '/app' or Cwd[:4] == '/tmp':
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'staticfiles'
     STATIC_DIRS = (os.path.join(BASE_DIR, 'static'),)
+    TIME_ZONE = 'Asia/Shanghai'
+    USE_TZ = False
